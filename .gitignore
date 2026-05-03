@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+venv/
+
+# Dataset / images / generated split files
+data/
+outputs/
+
+# Model weights / checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Temporary files
+*.tmp
+*.log
