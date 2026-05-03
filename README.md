@@ -6,7 +6,7 @@ This project predicts GPS coordinates from images using a convolutional neural n
 
 The collected image dataset is stored separately on Hugging Face
 
-Dataset link: [Hugging Face Dataset]([https://huggingface.co/datasets/aidankuo/img2GPStrainData](https://huggingface.co/datasets/aidankuo/img2GPSTrainingData))
+Dataset link: [Hugging Face Dataset](https://huggingface.co/datasets/aidankuo/img2GPSTrainingData)
 
 After downloading the dataset, place it in the project folder with this structure:
 
