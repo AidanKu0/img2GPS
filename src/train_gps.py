@@ -291,24 +291,24 @@ def main() -> None:
     parser.add_argument("--data_dir", type=str, default="/content/data")
     parser.add_argument("--epochs", type=int, default=30)
     parser.add_argument("--batch_size", type=int, default=64)
-    parser.add_argument("--patience", type=int, default=7)       # was 5; augmentation slows early convergence
+    parser.add_argument("--patience", type=int, default=7)       
     parser.add_argument("--val_size", type=float, default=0.20)
     parser.add_argument("--out", type=str, default="model.pt")
 
     parser.add_argument("--image_size", type=int, default=224)
     parser.add_argument("--grid_size", type=int, default=4)
-    parser.add_argument("--cell_loss_weight", type=float, default=0.3)  # was 1.0; focus on regression
+    parser.add_argument("--cell_loss_weight", type=float, default=0.3) 
 
-    parser.add_argument("--backbone_lr", type=float, default=1e-5)  # lower than ResNet: ConvNeXt pretrained weights are stronger
+    parser.add_argument("--backbone_lr", type=float, default=1e-5)  
     parser.add_argument("--head_lr", type=float, default=1e-3)
-    parser.add_argument("--weight_decay", type=float, default=1e-3)  # was 1e-4; more regularization
+    parser.add_argument("--weight_decay", type=float, default=1e-3) 
 
     parser.add_argument("--num_workers", type=int, default=4)
 
     parser.add_argument(
         "--use_all_data",
         action="store_true",
-        help="Combine train+test for final submission model. Disables local test evaluation.",
+        help="Combine train+test",
     )
 
     args = parser.parse_args()
@@ -329,7 +329,7 @@ def main() -> None:
     )
 
     if args.use_all_data:
-        print("\n*** use_all_data=True: combining train + test for final submission ***")
+        print("\n*** use_all_data=True: combining train + test***")
         all_df = pd.concat([train_df, test_df], ignore_index=True)
         train_df = all_df
         print(f"Total examples after merge: {len(train_df)}")
